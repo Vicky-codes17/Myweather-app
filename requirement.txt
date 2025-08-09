@@ -1,0 +1,16 @@
+pip install geopy
+pip install timezonefinder
+pip install pytz
+pip install requests
+pip install requests
+
+
+# tkinter
+#requests>=2.31.0
+# pathlib  
+# json
+# datetime 
+
+# System Operations
+# sys 
+# os  
