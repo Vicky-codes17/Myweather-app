@@ -3,6 +3,9 @@ from tkinter import Tk, Canvas, Entry, PhotoImage, messagebox
 import requests
 import json
 
+# Version
+from src.version import __version__
+
 from src.uv_index import UVIndex
 from src.temperature import Temperature
 from src.rainfall import Rainfall

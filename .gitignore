@@ -1,0 +1,66 @@
+# Python cache files 
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments 
+venv/
+.venv/
+env/
+.env/
+
+
+dist/
+build/
+*.egg-info/
+
+
+
+# API keys and passwords
+api_keys.txt
+.env
+config.ini
+secrets.json
+
+
+
+# VS Code settings
+.vscode/
+
+# PyCharm IDE
+.idea/
+
+# Other editors
+*.swp
+*.swo
+*~
+
+# OPERATING SYSTEM FILES
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# macOS
+.DS_Store
+.DS_Store?
+
+# Linux
+*~
+
+# LOG & TEMPORARY FILES
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# BACKUP FILES
+
+*.bak
+*.backup

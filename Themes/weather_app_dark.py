@@ -2,7 +2,7 @@ from pathlib import Path
 from tkinter import Tk, Canvas, Entry, PhotoImage
 
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"build/assets/frame0")
+ASSETS_PATH = OUTPUT_PATH / Path(r"assets/Dark_Mode")
 
 def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)

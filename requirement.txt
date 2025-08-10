@@ -4,6 +4,8 @@ pip install pytz
 pip install requests
 pip install requests
 
+pip install pyinstaller
+
 
 # tkinter
 #requests>=2.31.0
