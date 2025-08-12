@@ -4,15 +4,15 @@ import requests
 import json
 
 # Version
-from src.version import __version__
+from version import __version__
 
-from src.uv_index import UVIndex
-from src.temperature import Temperature
-from src.rainfall import Rainfall
-from src.air_pressure import AirPressure
-from src.wind import Wind
-from src.sun_times import SunTimes
-from src.hourly_forecast import HourlyForecast
+from uv_index import UVIndex
+from temperature import Temperature
+from rainfall import Rainfall
+from air_pressure import AirPressure
+from wind import Wind
+from sun_times import SunTimes
+from hourly_forecast import HourlyForecast
 
 
 class SimpleWeatherApp:
