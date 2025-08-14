@@ -188,7 +188,7 @@ climecast/
 #### **Option 2: Run from Source**
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/climecast.git
+git clone https://github.com/Vicky-Codes17/climecast.git
 cd climecast
 
 # Install dependencies
@@ -203,7 +203,7 @@ python3 main.py
 
 ### **1. Clone the Repository**
 ```bash
-git clone https://github.com/yourusername/climecast.git
+git clone https://github.com/Vicky-Codes17/climecast.git
 cd climecast
 ```
 
@@ -274,7 +274,7 @@ We welcome contributions from the community! Here's how you can help:
 1. **🍴 Fork the Repository**
    ```bash
    # Click "Fork" on GitHub, then clone your fork
-   git clone https://github.com/YOUR_USERNAME/climecast.git
+   git clone https://github.com/Vicky-Codes17/climecast.git
    cd climecast
    ```
 
