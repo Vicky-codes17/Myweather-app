@@ -127,45 +127,45 @@ ClimeCast is a modern, intuitive weather application built with Python and Tkint
 
 ```
 climecast/
-├── 📁 src/                          # Source code
-│   ├── 📄 main.py                   # Main application entry point
-│   ├── 📄 version.py                # Version information
-│   └── 📁 src/                      # Core modules
-│       ├── 📄 __init__.py           # Package initialization
-│       ├── 📄 uv_index.py          # UV index calculations
-│       ├── 📄 temperature.py       # Temperature handling
-│       ├── 📄 rainfall.py          # Rainfall predictions
-│       ├── 📄 air_pressure.py      # Air pressure metrics
-│       ├── 📄 wind.py              # Wind data processing
-│       ├── 📄 sun_times.py         # Sunrise/sunset calculations
-│       └── 📄 hourly_forecast.py   # Hourly forecast logic
-├── 📁 assets/                       # Application assets
-│   ├── 🖼️ icon.png                  # Application icon (PNG)
-│   ├── 🖼️ icon.ico                  # Application icon (ICO)
-│   ├── 🖼️ light.png                 # Light theme assets
-│   └── 🖼️ dark.png                  # Dark theme assets
-├── 📁 build/                        # UI build files
-│   ├── 📁 assets/                   # Generated UI assets
-│   ├── 📁 frame0/                   # Dark mode images
-│   └── 📁 frame1/                   # Light mode images
-├── 📁 releases/                     # Distribution packages
-│   ├── 📁 v1.0.0/                  # Version 1.0.0
-│   │   ├── 📁 linux/                # Linux distribution
-│   │   └── 📁 windows/              # Windows distribution
-│   └── 📁 latest/                   # Latest stable release
-├── 📁 docs/                         # Documentation
-│   ├── 📄 CONTRIBUTING.md           # Contribution guidelines
-│   ├── 📄 CHANGELOG.md              # Version history
-│   └── 📄 API.md                    # API documentation
-├── 📁 tests/                        # Test suite
-│   ├── 📄 test_main.py              # Main application tests
-│   └── 📄 test_modules.py           # Module unit tests
-├── 📄 README.md                     # This file
-├── 📄 LICENSE                       # MIT License
-├── 📄 requirement.txt               # Python dependencies
-├── 📄 version.txt                   # Current version
-├── 📄 .gitignore                    # Git ignore rules
-└── 📄 build_climecast.sh            # Build script
+├── 📁 src/                   
+│   ├── 📄 main.py             
+│   ├── 📄 version.py          
+│   └── 📁 src/              
+│       ├── 📄 __init__.py     
+│       ├── 📄 uv_index.py       
+│       ├── 📄 temperature.py       
+│       ├── 📄 rainfall.py      
+│       ├── 📄 air_pressure.py   
+│       ├── 📄 wind.py         
+│       ├── 📄 sun_times.py  
+│       └── 📄 hourly_forecast.py 
+├── 📁 assets/            
+│   ├── 🖼️ icon.png          
+│   ├── 🖼️ icon.ico                
+│   ├── 🖼️ light.png               
+│   └── 🖼️ dark.png                  
+├── 📁 build/                
+│   ├── 📁 assets/           
+│   ├── 📁 frame0/       
+│   └── 📁 frame1/           
+├── 📁 releases/              
+│   ├── 📁 v1.0.0/         
+│   │   ├── 📁 linux/           
+│   │   └── 📁 windows/             
+│   └── 📁 latest/            
+├── 📁 docs/                   
+│   ├── 📄 CONTRIBUTING.md         
+│   ├── 📄 CHANGELOG.md         
+│   └── 📄 API.md         
+├── 📁 tests/                
+│   ├── 📄 test_main.py      
+│   └── 📄 test_modules.py  
+├── 📄 README.md                    
+├── 📄 LICENSE                     
+├── 📄 requirement.txt         
+├── 📄 version.txt          
+├── 📄 .gitignore              
+└── 📄 build_climecast.sh     
 ```
 
 ## 🚀 **Getting Started**
