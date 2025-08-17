@@ -174,7 +174,7 @@ climecast/
 #### **Option 2: Run from Source**
 ```bash
 # Clone the repository
-git clone https://github.com/Vicky-Codes17/climecast.git
+git clone https://github.com/Vicky-Codes17/Myweather-app.git
 cd climecast
 
 # Install dependencies
@@ -189,7 +189,7 @@ python3 main.py
 
 ### **1. Clone the Repository**
 ```bash
-git clone https://github.com/Vicky-Codes17/climecast.git
+git clone https://github.com/Vicky-Codes17/Myweather-app.git
 cd climecast
 ```
 
