@@ -224,6 +224,27 @@ cd src
 python3 main.py
 ```
 
+## 🤝 **Contributing**
+
+We welcome contributions from the community! Here's how you can help:
+
+### **How to Contribute**
+
+1. **🍴 Fork the Repository**
+   ```bash
+   # Click "Fork" on GitHub, then clone your fork
+   git clone https://github.com/YOUR_USERNAME/climecast.git
+   cd climecast
+   ```
+
+2. **🌿 Create a Feature Branch**
+   ```bash
+   git checkout -b feature/amazing-feature
+   # or
+   git checkout -b bugfix/fix-issue-123
+   ```
+For more in detail [Contributing.md](Contributing.md) file for details
+
 ### **Development Guidelines**
 
 - **Code Style**: Follow PEP 8 Python style guidelines
@@ -244,21 +265,3 @@ Found a bug? Have a feature request? Please open an issue with:
 ## 📄 **License**
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-```
-MIT License
-
-Copyright (c) 2024 ClimeCast Development Team
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE
