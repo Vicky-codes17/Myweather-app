@@ -20,7 +20,7 @@ We provide security updates for the following versions of **ClimoCast**:
 If you find a security issue in ClimoCast, please **do not** open a public GitHub issue.  
 Instead, report it directly to our security team so we can fix it quickly and responsibly.
 
-**Contact Email:** [rameshvignesh0706@gmail.com](mailto:rameshvignesh0706@gmail.com)  
+**Contact Email:** [vigneshrameshrm18@gmail.com](mailto:vigneshrameshrm18@gmail.com)  
 
 When reporting, please include:
 
