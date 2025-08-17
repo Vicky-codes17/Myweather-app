@@ -1,53 +1,16 @@
 # Code of Conduct
 
-## Our Promise
+### 💬 Be Respectful
+- Treat everyone with kindness and empathy.
+- Respect differing ideas, experiences, and skill levels.
+- Use welcoming and inclusive language.
 
-We, as members, contributors, and leaders, promise to make our community a friendly and respectful place for everyone.  
-We will not treat anyone unfairly because of:
-
-- Age  
-- Physical appearance or abilities  
-- Background, culture, or nationality  
-- Gender identity or expression  
-- Level of experience or education  
-- Race or religion  
+### 🚫 Unacceptable Behavior
+- Harassment, discrimination, or personal attacks
+- Inappropriate or offensive content
+- Disruptive behavior in issues, PRs, or discussions
 
 We will work together to keep this community **safe, inclusive, and welcoming**.
-
----
-
-## Positive Behavior
-
-Examples of good behavior include:
-
-- Being respectful and polite to others  
-- Listening to different opinions and ideas  
-- Offering helpful feedback in a kind way  
-- Accepting feedback and learning from mistakes  
-- Supporting and encouraging each other  
-
----
-
-## Unacceptable Behavior
-
-Examples of behavior that is not acceptable:
-
-- Using rude, disrespectful, or hurtful language  
-- Making insulting or negative personal comments  
-- Bullying or harassing others in any form  
-- Sharing private information without permission  
-- Disrupting discussions or activities  
-
----
-
-## Enforcement Responsibilities
-
-Community leaders will:
-
-- Make sure the rules are followed  
-- Take fair action if rules are broken  
-- Remove or edit comments, contributions, or content that go against the rules  
-- Explain the reason for moderation when needed  
 
 ---
 
