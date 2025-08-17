@@ -1,50 +1,32 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: ''
+title: BUG
 labels: ''
 assignees: ''
 
 ---
 
----
-name: Bug Report
-about: Report a problem with ClimoCast
-title: "[Bug] Short description"
-labels: bug
-assignees: ''
----
+# 🐛 Bug Report
 
-## Describe the Bug
-A clear and concise description of what the bug is.
-
----
+## Description
+Describe the bug clearly.
 
 ## Steps to Reproduce
-Steps to reproduce the behavior:
-1. Open the app
-2. Go to '...'
-3. Click on '...'
-4. See the error
-
----
+1. Step one  
+2. Step two  
+3. Step three  
 
 ## Expected Behavior
-A clear and concise description of what you expected to happen.
+What should happen?
 
----
+## Actual Behavior
+What actually happens?
 
-## Screenshots (optional)
-If applicable, add screenshots to help explain your problem.
+## Screenshots (if any)
+Add screenshots here.
 
----
-
-## Device Information
-- **Device/OS:** (e.g., Android 13, iOS 17, Windows 11)
-- **App Version:** (e.g., 1.2.0)
-- **Internet Connection:** (Wi-Fi, Mobile Data, Offline)
-
----
-
-## Additional Context
-Add any other context about the problem here.
+## Checklist
+- [ ] Bug described clearly  
+- [ ] Steps provided  
+- [ ] Expected vs Actual added
