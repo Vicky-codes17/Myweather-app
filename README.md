@@ -238,32 +238,6 @@ cd src
 python3 main.py
 ```
 
-## 🏗️ **Building the Application**
-
-### **For Linux**
-```bash
-# Make build script executable
-chmod +x build_climecast.sh
-
-# Build the application
-./build_climecast.sh
-
-# Find your executable in:
-releases/v1.0.0/linux/ClimeCast
-```
-
-### **For Windows**
-```cmd
-REM Install dependencies
-pip install pyinstaller requests
-
-REM Build executable
-cd src
-pyinstaller --onefile --windowed --name="ClimeCast" main.py
-
-REM Find your executable in:
-src\dist\ClimeCast.exe
-```
 
 ## 🤝 **Contributing**
 
