@@ -243,7 +243,7 @@ We welcome contributions from the community! Here's how you can help:
    # or
    git checkout -b bugfix/fix-issue-123
    ```
-For more in detail [Contributing.md](Contributing.md) file for details
+For more in detail [Contributing.md](Contributing.md) file for details,...
 
 ### **Development Guidelines**
 
