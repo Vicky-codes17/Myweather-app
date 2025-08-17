@@ -1,34 +1,29 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: ''
+title: FEATURES
 labels: ''
 assignees: ''
 
 ---
 
----
-name: Feature Request
-about: Suggest a new feature for ClimoCast
-title: "[Feature] Short description"
-labels: enhancement
-assignees: ''
----
+# ✨ Feature Request
 
-## Feature Description
-A clear and concise description of the feature you’d like to see.
+## Description
+Describe the new feature or improvement.
 
----
+## Why is this needed?
+Explain why this feature would be useful.
 
-## Why This Feature Is Useful
-Explain how this feature will improve the app or help users.
+## Suggested Solution
+How can this feature be added or improved?
 
----
+## Acceptance Criteria
+- [ ] Clear description  
+- [ ] Useful for users  
+- [ ] Possible to implement  
 
-## Possible Implementation
-(Optional) Describe how you think this could be implemented.
-
----
-
-## Additional Notes
-Add any extra ideas, references, or screenshots.
+## Checklist
+- [ ] Feature described clearly  
+- [ ] Benefits explained  
+- [ ] Solution suggested
