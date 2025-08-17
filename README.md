@@ -165,7 +165,7 @@ climecast/
 ### **Quick Start**
 
 #### **Option 1: Download Pre-built Application**
-1. Go to [Releases](releases/latest/)
+1. Go to Releases
 2. Download the appropriate version for your system:
    - **Linux**: `releases/latest/linux/ClimeCast`
    - **Windows**: `releases/latest/windows/ClimeCast.exe`
