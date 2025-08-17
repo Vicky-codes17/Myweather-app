@@ -27,7 +27,7 @@ This Code of Conduct applies:
 
 If you experience or see behavior that breaks this Code of Conduct, please contact us at:
 
-📧 **Email:** [rameshvignesh0706@gmail.com](mailto:vigneshrameshrm18@gmail.com)  
+📧 **Email:** [vigneshrameshrm18@gmail.com](mailto:vigneshrameshrm18@gmail.com)  
 
 All reports will be handled respectfully and kept private.
 
