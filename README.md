@@ -13,20 +13,6 @@
 
 </div>
 
-## 📖 **Table of Contents**
-
-- [About ClimeCast](#about-climecast)
-- [Features](#features)
-- [Planned Features](#planned-features)
-- [Screenshots](#screenshots)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Development Setup](#development-setup)
-- [Building the Application](#building-the-application)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
-
 ## 🌟 **About ClimeCast**
 
 ClimeCast is a modern, intuitive weather application built with Python and Tkinter. It provides real-time weather information with a beautiful user interface that adapts to both dark and light themes. Whether you're planning your day or checking the weekly forecast, ClimeCast delivers accurate weather data in an elegant, easy-to-use interface.
