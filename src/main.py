@@ -25,6 +25,7 @@ class SimpleWeatherApp:
         self.is_dark_mode = False
         
         self.current_weather_data = None
+        self.current_city = None  # ← remember last successful city
         
         # Weather API key
         self.api_key = "9504325ebcb47c038114642f03b01e6e"
@@ -138,8 +139,10 @@ class SimpleWeatherApp:
                 self.canvas_items[f'img_{i}'] = self.canvas.create_image(pos[0], pos[1], image=self.images[f'image_{i}'])
         
         self.create_search_button()
+        self.create_refresh_button()   # ← added
         self.create_toggle_switch()
         self.add_placeholder()
+        self.create_status_area()      # ← added
         
         if self.is_dark_mode:
             self.window.configure(bg="#0C1331")
@@ -167,6 +170,49 @@ class SimpleWeatherApp:
             'x2': search_x + 18,
             'y2': search_y + 18
         }
+
+    def create_refresh_button(self):
+        """Add a clickable 🔄 Refresh button next to search"""
+        # place to the right of the search icon
+        btn_x, btn_y = 470, 130
+        padding_x, padding_y = 18, 12
+        label = "🔄 Refresh"
+
+        # background rounded rect using polygon approximation
+        self.canvas_items['refresh_bg'] = self.canvas.create_rectangle(
+            btn_x - 55, btn_y - 18, btn_x + 55, btn_y + 18,
+            fill="#EDF2F7" if not self.is_dark_mode else "#1F2937",
+            outline="#CBD5E0" if not self.is_dark_mode else "#374151",
+            width=1
+        )
+        self.canvas_items['refresh_text'] = self.canvas.create_text(
+            btn_x, btn_y, text=label,
+            font=("Arial", 12, "bold"),
+            fill="#2D3748" if not self.is_dark_mode else "#E5E7EB"
+        )
+
+        self.refresh_area = {
+            'x1': btn_x - 55, 'y1': btn_y - 18,
+            'x2': btn_x + 55, 'y2': btn_y + 18
+        }
+
+    def create_status_area(self):
+        """Small, reusable status text near the search box"""
+        # clear old if exists
+        if 'status_text' in self.canvas_items:
+            self.canvas.delete(self.canvas_items['status_text'])
+        # status below the entry
+        color = "#718096" if not self.is_dark_mode else "#A0AEC0"
+        self.canvas_items['status_text'] = self.canvas.create_text(
+            120, 160, text="", anchor="w",
+            font=("Arial", 11), fill=color
+        )
+
+    def set_status(self, text: str):
+        """Update status message"""
+        if 'status_text' not in self.canvas_items:
+            self.create_status_area()
+        self.canvas.itemconfig(self.canvas_items['status_text'], text=text)
     
     def add_placeholder(self):
         #PlaceHolder
@@ -189,51 +235,80 @@ class SimpleWeatherApp:
         if self.entry.get() == "":
             self.entry.insert(0, "Enter city name...")
             self.entry.config(fg="gray")
+
+    # ----- Networking helper (shared by search & refresh) -----
+    def _fetch_weather(self, city: str):
+        """Return dict with weather data for a city, or raise on error."""
+        url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={self.api_key}&units=metric"
+        response = requests.get(url)
+        data = response.json()
+
+        if response.status_code != 200:
+            raise ValueError(f"City '{city}' not found")
+
+        lat = data['coord']['lat']
+        lon = data['coord']['lon']
+        uv_value = self.uv_handler.get_uv_data(lat, lon)
+
+        return {
+            'city': city,
+            'country': data['sys']['country'],
+            'temperature': data['main']['temp'],
+            'description': data['weather'][0]['description'],
+            'humidity': data['main']['humidity'],
+            'wind_speed': data['wind']['speed'],
+            'feels_like': data['main']['feels_like'],
+            'uv_index': uv_value,
+            'clouds': data.get('clouds', {}).get('all', 0),
+            'pressure': data['main']['pressure'],
+            'lat': lat,
+            'lon': lon
+        }
     
     def search_weather(self):
         city = self.entry.get().strip()
         
-        # Name Correction
         if not city or city == "Enter city name...":
             messagebox.showwarning("Warning", "Please enter a city name!")
             return
         
         try:
-            url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={self.api_key}&units=metric"
-            response = requests.get(url)
-            data = response.json()
-
-            if response.status_code == 200:
-                lat = data['coord']['lat']
-                lon = data['coord']['lon']
-                
-                uv_value = self.uv_handler.get_uv_data(lat, lon)
-            
-            if response.status_code == 200:
-                self.current_weather_data = {
-                    'city': city,
-                    'country': data['sys']['country'],
-                    'temperature': data['main']['temp'],
-                    'description': data['weather'][0]['description'],
-                    'humidity': data['main']['humidity'],
-                    'wind_speed': data['wind']['speed'],
-                    'feels_like': data['main']['feels_like'],
-                    'uv_index': uv_value,
-                    'clouds': data.get('clouds', {}).get('all', 0),
-                    'pressure': data['main']['pressure'],
-                    'lat': lat,  
-                    'lon': lon 
-                }
-                
-                self.display_weather_data(self.current_weather_data)
-                
-            else:
-                messagebox.showerror("Error", f"City '{city}' not found!\nPlease check the spelling and try again.")
-                
+            self.set_status("Fetching latest data...")
+            weather = self._fetch_weather(city)
+            self.current_weather_data = weather
+            self.current_city = city  # remember for Refresh
+            self.display_weather_data(weather)
+            self.set_status("Updated ✔️")
+        except ValueError as ve:
+            messagebox.showerror("Error", f"{ve}\nPlease check the spelling and try again.")
+            self.set_status("")
         except requests.exceptions.RequestException:
             messagebox.showerror("Error", "No internet connection!\nPlease check your connection and try again.")
+            self.set_status("")
         except Exception as e:
             messagebox.showerror("Error", f"Something went wrong!\nError: {str(e)}")
+            self.set_status("")
+    
+    def refresh_weather(self):
+        """Re-fetch data for last successful city."""
+        if not self.current_city:
+            messagebox.showinfo("Info", "No city to refresh. Please search a city first.")
+            return
+        try:
+            self.set_status("Fetching latest data...")
+            weather = self._fetch_weather(self.current_city)
+            self.current_weather_data = weather
+            self.display_weather_data(weather)
+            self.set_status("Updated ✔️")
+        except ValueError as ve:
+            messagebox.showerror("Error", f"{ve}")
+            self.set_status("")
+        except requests.exceptions.RequestException:
+            messagebox.showerror("Error", "No internet connection!\nPlease check your connection and try again.")
+            self.set_status("")
+        except Exception as e:
+            messagebox.showerror("Error", f"Something went wrong!\nError: {str(e)}")
+            self.set_status("")
     
     def display_weather_data(self, weather_data):
         if self.is_dark_mode:
@@ -513,7 +588,10 @@ class SimpleWeatherApp:
             self.toggle_area['y1'] <= y <= self.toggle_area['y2']) or \
            (hasattr(self, 'search_area') and 
             self.search_area['x1'] <= x <= self.search_area['x2'] and 
-            self.search_area['y1'] <= y <= self.search_area['y2']):
+            self.search_area['y1'] <= y <= self.search_area['y2']) or \
+           (hasattr(self, 'refresh_area') and
+            self.refresh_area['x1'] <= x <= self.refresh_area['x2'] and
+            self.refresh_area['y1'] <= y <= self.refresh_area['y2']):
             self.canvas.config(cursor="hand2")
         else:
             self.canvas.config(cursor="")
@@ -532,9 +610,14 @@ class SimpleWeatherApp:
                 self.search_area['y1'] <= y <= self.search_area['y2']):
                 self.search_weather()
                 return
+
+        if hasattr(self, 'refresh_area'):
+            if (self.refresh_area['x1'] <= x <= self.refresh_area['x2'] and
+                self.refresh_area['y1'] <= y <= self.refresh_area['y2']):
+                self.refresh_weather()
+                return
     
     def get_air_quality_status(self, pressure, humidity):
-      
         if pressure < 1000 or humidity > 80:
             return "Poor", "#F44336"  # Red
         elif 1000 <= pressure <= 1020 and 40 <= humidity <= 60:
