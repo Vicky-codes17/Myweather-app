@@ -233,7 +233,7 @@ We welcome contributions from the community! Here's how you can help:
 1. **🍴 Fork the Repository**
    ```bash
    # Click "Fork" on GitHub, then clone your fork
-   git clone https://github.com/Vicky-Codes17/climecast.git
+   git clone https://github.com/Vicky-Codes17/Myweather-app.git
    cd climecast
    ```
 
