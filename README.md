@@ -113,45 +113,45 @@ ClimeCast is a modern, intuitive weather application built with Python and Tkint
 
 ```
 climecast/
-├── 📁 src/                   
-│   ├── 📄 main.py             
-│   ├── 📄 version.py          
-│   └── 📁 src/              
-│       ├── 📄 __init__.py     
-│       ├── 📄 uv_index.py       
-│       ├── 📄 temperature.py       
-│       ├── 📄 rainfall.py      
-│       ├── 📄 air_pressure.py   
-│       ├── 📄 wind.py         
-│       ├── 📄 sun_times.py  
-│       └── 📄 hourly_forecast.py 
-├── 📁 assets/            
-│   ├── 🖼️ icon.png          
-│   ├── 🖼️ icon.ico                
-│   ├── 🖼️ light.png               
-│   └── 🖼️ dark.png                  
-├── 📁 build/                
-│   ├── 📁 assets/           
-│   ├── 📁 frame0/       
-│   └── 📁 frame1/           
-├── 📁 releases/              
-│   ├── 📁 v1.0.0/         
-│   │   ├── 📁 linux/           
-│   │   └── 📁 windows/             
-│   └── 📁 latest/            
-├── 📁 docs/                   
-│   ├── 📄 CONTRIBUTING.md         
-│   ├── 📄 CHANGELOG.md         
-│   └── 📄 API.md         
-├── 📁 tests/                
-│   ├── 📄 test_main.py      
-│   └── 📄 test_modules.py  
-├── 📄 README.md                    
-├── 📄 LICENSE                     
-├── 📄 requirement.txt         
-├── 📄 version.txt          
-├── 📄 .gitignore              
-└── 📄 build_climecast.sh     
+├──  src/                   
+│   ├──  main.py             
+│   ├──  version.py          
+│   └──  src/              
+│       ├──  __init__.py     
+│       ├──  uv_index.py       
+│       ├──  temperature.py       
+│       ├──  rainfall.py      
+│       ├──  air_pressure.py   
+│       ├──  wind.py         
+│       ├──  sun_times.py  
+│       └──  hourly_forecast.py 
+├──  assets/            
+│   ├──  icon.png          
+│   ├──  icon.ico                
+│   ├──  light.png               
+│   └──  dark.png                  
+├──  build/                
+│   ├──  assets/           
+│   ├──  frame0/       
+│   └──  frame1/           
+├──  releases/              
+│   ├──  v1.0.0/         
+│   │   ├──  linux/           
+│   │   └──  windows/             
+│   └──  latest/            
+├──  docs/                   
+│   ├──  CONTRIBUTING.md         
+│   ├──  CHANGELOG.md         
+│   └──  API.md         
+├──  tests/                
+│   ├──  test_main.py      
+│   └──  test_modules.py  
+├──  README.md                    
+├──  LICENSE                     
+├──  requirement.txt         
+├──  version.txt          
+├──  .gitignore              
+└──  build_climecast.sh     
 ```
 
 ## 🚀 **Getting Started**
