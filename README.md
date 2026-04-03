@@ -27,17 +27,17 @@ ClimeCast is a modern, intuitive weather application built with Python and Tkint
 ## ✨ **Features**
 
 ### **Current Features**
-- 🌡️ **Real-time Weather Data**
+[x] 🌡️ **Real-time Weather Data**
   - Current temperature, humidity, and conditions
   - "Feels like" temperature
   - Weather descriptions and icons
 
-- 📊 **7-Hour Forecast**
+[x] 📊 **7-Hour Forecast**
   - Hourly weather predictions
   - Temperature trends
   - Weather condition changes
 
-- 🌓 **Dark/Light Mode Toggle**
+[x] 🌓 **Dark/Light Mode Toggle**
   - Automatic theme switching
   - Eye-friendly interface
   - Persistent theme preference
